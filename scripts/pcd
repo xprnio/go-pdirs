@@ -1,0 +1,8 @@
+#!/bin/sh
+
+project="$1"
+result="$(go-pdirs "$1")"
+if [ $? -eq 0 ]; then
+  echo "moving to $result"
+  cd "$result"
+fi

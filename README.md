@@ -1,4 +1,6 @@
 # Project directory resolver
+A program for resolving projects to directories.
+A bash script for moving into the project directory is also included in `scripts/pcd`.
 
 ## Usage
 ```
