@@ -34,8 +34,8 @@ project_2=$HOME/path/to/project_2
 
 ## Installing
 Currently only AUR packages exist:
-- [go-pdirs@0.1.1-1](https://aur.archlinux.org/packages/go-pdirs)
-- [go-pdirs-git@0.1.1-1](https://aur.archlinux.org/packages/go-pdirs-git)
+- [go-pdirs@0.1.2-1](https://aur.archlinux.org/packages/go-pdirs)
+- [go-pdirs-git@0.1.2-1](https://aur.archlinux.org/packages/go-pdirs-git)
 
 ## Building
 To build the application, make sure you have `go` and `make` installed.
