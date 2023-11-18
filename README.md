@@ -1,6 +1,5 @@
 # Project directory resolver
 A program for resolving projects to directories.
-A bash script for moving into the project directory is also included in `scripts/pcd`.
 
 ## Usage
 ```
@@ -8,7 +7,15 @@ go-pdirs [options] <project>
 
 Options:
     --help                   View help
+    --scripts                Print bash scripts
     --list                   List all projects
+```
+
+### Scripts
+The application comes with a bash function for navigating to project directories.
+In order to call that function, you will need to include it in your `.bashrc` (or equivalent):
+```bash
+eval "$(go-pdirs --scripts)"
 ```
 
 ## Configuring directories

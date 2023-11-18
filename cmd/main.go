@@ -31,9 +31,15 @@ func main() {
 		switch current {
 		case "--help":
 			printHelp()
+			os.Exit(1)
 			return
 		case "--list":
 			printProjects(projects)
+			os.Exit(1)
+			return
+		case "--scripts":
+			printScripts()
+			os.Exit(1)
 			return
 		default:
 			names = append(names, current)
@@ -43,6 +49,7 @@ func main() {
 	if len(names) == 0 {
 		printHelp()
 		os.Exit(1)
+		return
 	}
 
 	if err := printProjectDirs(names, projects); err != nil {
@@ -59,7 +66,7 @@ func printProjects(projects resolver.Projects) {
 
 	fmt.Fprintf(os.Stderr, "Projects:\n")
 	for name, path := range projects {
-		fmt.Fprintf(os.Stderr, "    %s: %s\n", name, path)
+		fmt.Printf("    %s: %s\n", name, path)
 	}
 }
 
@@ -91,6 +98,17 @@ func printProjectDirs(names []string, projects resolver.Projects) error {
 	return nil
 }
 
+func printScripts() {
+	fmt.Println("function pcd {")
+	fmt.Println("  project=\"$1\"")
+	fmt.Println("  result=\"$(go-pdirs \"$1\")\"")
+	fmt.Println("  if [[ \"$?\" == \"0\" ]]; then")
+	fmt.Println("    echo \"cd $result\"")
+	fmt.Println("    cd \"$result\"")
+	fmt.Println("  fi")
+	fmt.Println("}")
+}
+
 func printHelp() {
 	program := os.Args[0]
 
@@ -99,7 +117,8 @@ func printHelp() {
 	usage.WriteString(fmt.Sprintf("    %s [options] <project>\n", program))
 	usage.WriteString("Options:\n")
 	usage.WriteString("    --help                   View help\n")
+	usage.WriteString("    --scripts                Print bash scripts\n")
 	usage.WriteString("    --list                   List all projects\n")
 
-	fmt.Fprintf(os.Stderr, usage.String())
+	fmt.Println(usage.String())
 }
