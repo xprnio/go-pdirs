@@ -1,0 +1,6 @@
+[submodule ".packages/archlinux/go-pdirs"]
+    path = .packages/archlinux/go-pdirs
+    url = ssh://aur@aur.archlinux.org/pkgbase.git
+[submodule ".packages/archlinux/go-pdirs-git"]
+    path = .packages/archlinux/go-pdirs-git
+    url = ssh://aur@aur.archlinux.org/pkgbase.git
