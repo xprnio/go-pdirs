@@ -38,7 +38,9 @@ chmod +x bin/go-pdirs
 
 # Optionally, move the binary to /usr/local/bin
 sudo mv "$(pwd)/bin/go-pdirs" /usr/local/bin/go-pdirs
+sudo mv "$(pwd)/scripts/pcd" /usr/local/bin/pcd
 
 # Or create a symlink in case you want to make it easier to update
 sudo ln -fs "$(pwd)/bin/go-pdirs" /usr/local/bin/go-pdirs
+sudo ln -fs "$(pwd)/scripts/pcd" /usr/local/bin/pcd
 ```
