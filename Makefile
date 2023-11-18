@@ -14,7 +14,7 @@ clean:
 	$(GOCLEAN) -testcache
 	rm -rf "$(BUILD_DIR)/$(BINARY_NAME)"
 
-test: clean
+test:
 	$(GOTEST) -v ./...
 
 build: clean
