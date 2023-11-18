@@ -9,6 +9,20 @@ Options:
     --list                   List all projects
 ```
 
+## Configuring directories
+The application requires you to have a configuration file in `$HOME/.pdirs`.
+The configuration file is currently just a newline-separated file of key-value pairs:
+```
+project_1=/home/user/path/to/project_1
+project_2=/home/user/path/to/project_2
+```
+
+The configuration file also supports environment variables as such:
+```
+project_1=$HOME/path/to/project_1
+project_2=$HOME/path/to/project_2
+```
+
 ## Installing
 Currently only AUR packages exist:
 - [go-pdirs@0.1.0-1](https://aur.archlinux.org/packages/go-pdirs)
