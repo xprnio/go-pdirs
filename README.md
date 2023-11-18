@@ -11,8 +11,8 @@ Options:
 
 ## Installing
 Currently only AUR packages exist:
-[go-pdirs](https://aur.archlinux.org/packages/go-pdirs)
-[go-pdirs-git](https://aur.archlinux.org/packages/go-pdirs-git)
+- [go-pdirs@0.1.0-1](https://aur.archlinux.org/packages/go-pdirs)
+- [go-pdirs-git@0.1.0-3](https://aur.archlinux.org/packages/go-pdirs-git)
 
 ## Building
 To build the application, make sure you have `go` and `make` installed.
